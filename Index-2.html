@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeFlow Blood Donation Network</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">🩸</span> LifeFlow
+      </a>
+
+      <nav class="nav-links">
+        <a href="#how-it-works">How it Works</a>
+        <a href="#blood-stock">Blood Stock</a>
+        <a href="#register">Register</a>
+      </nav>
+
+      <a href="#register" class="btn btn-primary nav-cta">Register Now</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Every Drop Counts.<br />Save a Life Today.</h1>
+      <p>
+        Join the LifeFlow Blood Donation Network to register as a donor,
+        check blood availability, and support life-saving donation camps.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#register" class="btn btn-primary">Become a Donor</a>
+        <a href="#blood-stock" class="btn btn-outline">Check Blood Stock</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blood Stock Tracker -->
+  <section id="blood-stock" class="stock-section">
+    <div class="container">
+      <h2>Real-Time Blood Stock</h2>
+      <p class="section-subtitle">
+        Current sample stock levels across blood groups.
+      </p>
+
+      <div class="stock-grid">
+        <div class="stock-card">
+          <h3>O-</h3>
+          <div class="progress">
+            <div class="progress-bar critical" style="width: 15%"></div>
+          </div>
+          <span class="status critical">Critical Shortage</span>
+        </div>
+
+        <div class="stock-card">
+          <h3>A</h3>
+          <div class="progress">
+            <div class="progress-bar low" style="width: 45%"></div>
+          </div>
+          <span class="status low">Low Stock</span>
+        </div>
+
+        <div class="stock-card">
+          <h3>B</h3>
+          <div class="progress">
+            <div class="progress-bar stable" style="width: 75%"></div>
+          </div>
+          <span class="status stable">Stable</span>
+        </div>
+
+        <div class="stock-card">
+          <h3>AB-</h3>
+          <div class="progress">
+            <div class="progress-bar low" style="width: 35%"></div>
+          </div>
+          <span class="status low">Low Stock</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="features-section">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="section-subtitle">
+        Donating blood is simple. Follow these three steps.
+      </p>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>1. Register</h3>
+          <p>Create your donor profile with your name, blood type, phone number, and location.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">📍</div>
+          <h3>2. Find Camps</h3>
+          <p>Discover nearby donation camps and choose a convenient time to donate.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">❤️</div>
+          <h3>3. Donate Life</h3>
+          <p>Donate blood safely and help patients in need receive timely treatment.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donor Registration -->
+  <section id="register" class="register-section">
+    <div class="container register-container">
+      <div class="register-info">
+        <h2>Become a LifeFlow Donor</h2>
+        <p>
+          Your registration helps organize donor information for demonstration
+          and awareness purposes. Please enter accurate sample details.
+        </p>
+
+        <ul class="register-points">
+          <li>✔ Quick and simple registration</li>
+          <li>✔ Choose your blood group</li>
+          <li>✔ Receive instant confirmation</li>
+        </ul>
+      </div>
+
+      <form id="donorForm" class="register-form" novalidate action="#" onsubmit="event.preventDefault(); alert('Registration successful! You are now part of the LifeFlow network.');">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required />
+          <small class="error-message" id="nameError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="bloodType">Blood Type</label>
+          <select id="bloodType" name="bloodType" required>
+            <option value="">Select blood type</option>
+            <option value="O-">O-</option>
+            <option value="O+">O+</option>
+            <option value="A-">A-</option>
+            <option value="A+">A+</option>
+            <option value="B-">B-</option>
+            <option value="B+">B+</option>
+            <option value="AB-">AB-</option>
+            <option value="AB+">AB+</option>
+          </select>
+          <small class="error-message" id="bloodError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit phone number" required />
+          <small class="error-message" id="phoneError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City / Location</label>
+          <input type="text" id="city" name="city" placeholder="Enter your city or location" required />
+          <small class="error-message" id="cityError"></small>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-full">Register as Donor</button>
+
+        <p id="formSuccess" class="success-message" hidden>
+          Registration successful! You are now part of the LifeFlow network.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 LifeFlow Blood Donation Network. Educational prototype.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
